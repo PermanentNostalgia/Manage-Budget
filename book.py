@@ -1,16 +1,6 @@
 import json, os
 
 class Book:
-    def __init__(self):
-        self.clear()
-    
-    def make(self, book_name):
-        book_file = open(book_name, "w")
-        self.clear()
-        self.book_name = book_name
-        
-        book_file.close()
-    
     def load(self, book_name):
         book_file = open(book_name, "r")
         self.__book = json.load(book_file)
